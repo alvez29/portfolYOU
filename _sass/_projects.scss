@@ -1,10 +1,32 @@
+// Masonry Grid Layout
+.masonry-grid {
+  display: flex;
+  gap: 20px;
+  // width: 100%; // Removed to prevent overflow with margins
+}
+
+.masonry-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0; // Prevent flex items from overflowing
+}
+
 .project.card {
   border-radius: $rounded-borders;
   text-decoration: none !important;
-  margin: 10px auto;
+  margin: 0; // Reset margin as gap handles spacing
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; // For absolute positioning of sticker
 
   .card-img-top {
     border-radius: $rounded-borders $rounded-borders 0 0;
+    width: 100%;
+    height: auto; // Allow natural height
+    object-fit: cover;
   }
 
   transition: transform 400ms;
@@ -12,5 +34,27 @@
   &:hover:not(.post) {
     transform: translateY(-8px);
     box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+  }
+
+  // Star Sticker
+  .star-sticker {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #ffd700; // Gold
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: rotate(15deg);
+    z-index: 10;
+
+    // Optional: Add a border or outline for better contrast
+    border: 2px solid #fff;
   }
 }
