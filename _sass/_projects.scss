@@ -57,4 +57,24 @@
     // Optional: Add a border or outline for better contrast
     border: 2px solid #fff;
   }
+
+  // Construction Sticker
+  .construction-sticker {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #ff8c00; // Dark Orange
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; // Slightly smaller for the tools icon
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: rotate(15deg);
+    z-index: 10;
+    border: 2px solid #fff;
+  }
 }
