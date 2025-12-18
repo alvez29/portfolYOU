@@ -37,8 +37,7 @@
   {%- assign project_url = project.external_url -%}
   {%- assign external = true -%}
   {%- else -%}
-  {%- assign project_slug = project.name | slugify -%}
-  {%- assign project_url = '/projects/' | append: project_slug | relative_url -%}
+  {%- assign project_url = project.url | relative_url -%}
   {%- assign external = false -%}
   {%- endif -%}
   {% include projects/project-card.html %}

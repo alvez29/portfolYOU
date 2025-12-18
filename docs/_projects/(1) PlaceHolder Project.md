@@ -1,5 +1,6 @@
 ---
 name: PlaceHolder Project
+permalink: /projects/placeholder-project
 starred: true
 tools: [nothing, important]
 image: https://www.sketchappsources.com/resources/source-image/project-neon-groove-music-ui.png
